@@ -1,0 +1,5 @@
+{
+  "/api/processar-csv-hibrido/route": "app/api/processar-csv-hibrido/route.js",
+  "/api/chat-dashboard/route": "app/api/chat-dashboard/route.js",
+  "/page": "app/page.js"
+}
