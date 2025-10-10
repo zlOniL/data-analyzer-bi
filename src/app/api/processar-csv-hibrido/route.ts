@@ -15,13 +15,13 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // 1. Processamento local (ETL) - muito rápido
+    console.log('1. Processamento local (ETL) - muito rápido');
     const processedData = processDataLocally(csvData, columns);
     
-    // 2. Enviar KPIs para LLM gerar insights
+    console.log('2. Enviar KPIs para LLM gerar insights');
     const insights = await generateInsightsWithLLM(processedData.kpis, csvData.length);
     
-    // 3. Combinar dados processados + insights da LLM
+    console.log('3. Combinar dados processados + insights da LLM');
     const result: LLMResponse = {
       dadosEstruturados: processedData.dadosEstruturados,
       kpis: processedData.kpis,
