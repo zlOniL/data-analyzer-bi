@@ -169,6 +169,8 @@ Retorne apenas o texto dos insights, sem formatação adicional.`;
     }
 
     const data = await response.json();
+    console.log('Resposta da LLM:', data);
+    console.log('Insights gerados:', data.choices[0].message.content.trim());
     return data.choices[0].message.content.trim();
   } catch (error) {
     console.error('Erro ao gerar insights:', error);
