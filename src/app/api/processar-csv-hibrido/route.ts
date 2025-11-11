@@ -152,7 +152,7 @@ Retorne apenas o texto dos insights, sem formatação adicional.`;
         'X-Title': 'Dashboard Vendas IA'
       },
       body: JSON.stringify({
-        model: 'deepseek/deepseek-chat-v3.1:free',
+        model: 'openai/gpt-oss-20b:free',
         messages: [
           {
             role: 'user',
